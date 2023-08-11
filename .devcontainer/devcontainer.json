@@ -1,8 +1,13 @@
 {
   "name": "Next.js TypeScript",
-  "image": "mcr.microsoft.com/vscode/devcontainers/typescript-node:16-buster",
+  // Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
+	"image": "mcr.microsoft.com/devcontainers/typescript-node:1-20-bookworm",
+ 	// Features to add to the dev container. More info: https://containers.dev/features.
+  // absent
   "appPort": [3000],
+ 	// Use 'postCreateCommand' to run commands after the container is created.
   "postCreateCommand": "pnpm install",
+  // Configure tool-specific properties.
   "customizations": {
     "vscode": {
       "extensions": ["dbaeumer.vscode-eslint"],
@@ -18,4 +23,6 @@
   "containerEnv": {
     "TZ": "${localEnv:TZ}"
   }
+  // Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
+	// "remoteUser": "root"
 }
