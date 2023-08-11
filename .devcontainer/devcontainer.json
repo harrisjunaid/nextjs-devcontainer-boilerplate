@@ -3,9 +3,13 @@
   "image": "mcr.microsoft.com/vscode/devcontainers/typescript-node:16-buster",
   "appPort": [3000],
   "postCreateCommand": "pnpm install",
-  "extensions": ["dbaeumer.vscode-eslint"],
-  "settings": {
-    "terminal.integrated.shell.linux": "/bin/bash"
+  "customizations": {
+    "vscode": {
+      "extensions": ["dbaeumer.vscode-eslint"],
+      "settings": {
+        "terminal.integrated.shell.linux": "/bin/bash"
+      }
+    }
   },
   "remoteEnv": {
     "NODE_ENV": "development"
